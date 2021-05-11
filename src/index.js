@@ -18,10 +18,13 @@ function output(txt, regex, target) {
 
 let preElement = document.querySelector("pre");
 
-let text = `800-456-1234
-(500) 456-6543
-1228906789
+let text = `
+foo
+foobar
+foobaz
+fooboo
 `;
-let rgx = /\(?\d{3}\)?[\s-]?\d{3}[-]?\d{4}/g;
+// negative lookahead ?!
+let rgx = /foo(?=bar|boo)/g;
 
 output(text, rgx, preElement);
