@@ -18,15 +18,7 @@ function output(txt, regex, target) {
 
 let preElement = document.querySelector("pre");
 
-let text = `https://egghead.io
-not web address
-http://
-https://www.egghead.io
-`;
-let rgx = /https{0,1}:\/\//gi;
+let text = `cat mat Bat ?at 0at`;
+let rgx = /[cm]at/g;
 
 output(text, rgx, preElement);
-
-console.log(rgx.exec(text));
-console.log(rgx.exec(text));
-console.log(text.match(rgx));
