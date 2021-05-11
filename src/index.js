@@ -18,13 +18,9 @@ function output(txt, regex, target) {
 
 let preElement = document.querySelector("pre");
 
-let text = `
-foo
-foobar
-foobaz
-fooboo
-`;
-// negative lookahead ?!
-let rgx = /foo(?=bar|boo)/g;
+let text = `This island is his. It is`;
+// \b: this is a shorthand for looking for words
+
+let rgx = /is\B/g;
 
 output(text, rgx, preElement);
