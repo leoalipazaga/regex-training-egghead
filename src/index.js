@@ -8,6 +8,12 @@ document.getElementById("app").innerHTML = `
   <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
 </div>
 `;
+// \s: this shorthand match all spaces
+// \d: this shorthand match all digits
+// \w: this shorthand match digits and characters
+// \D: this shorthand match all characters except digits
+// \W: this shorthand match all characters except digits and characters
+// \S: this shorthand match all characters except spaces
 
 function output(txt, regex, target) {
   target.innerHTML = txt.replace(
@@ -19,6 +25,6 @@ function output(txt, regex, target) {
 let preElement = document.querySelector("pre");
 
 let text = `cat mat Bat ?at 0at`;
-let rgx = /[cm]at/g;
+let rgx = /\w/g;
 
 output(text, rgx, preElement);
