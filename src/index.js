@@ -18,9 +18,8 @@ function output(txt, regex, target) {
 
 let preElement = document.querySelector("pre");
 
-let text = `This island is his. It is`;
-// \b: this is a shorthand for looking for words
+let text = `It was the the thing`;
 
-let rgx = /is\B/g;
+let rgx = /(the)\s?(?=\1)/g;
 
 output(text, rgx, preElement);
