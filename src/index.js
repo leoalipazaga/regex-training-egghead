@@ -18,8 +18,14 @@ function output(txt, regex, target) {
 
 let preElement = document.querySelector("pre");
 
-let text = `It was the the thing`;
+let text = `12/1/16
+01-12-2020
+12-6-18
+`;
 
-let rgx = /(the)\s?(?=\1)/g;
+// ^: match at the start of line with line anchors
+// m: match at the start of line but multilines¸
+
+let rgx = /^12/gm;
 
 output(text, rgx, preElement);
